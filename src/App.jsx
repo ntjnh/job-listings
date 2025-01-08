@@ -20,8 +20,11 @@ function App() {
                     Full Time
                     USA only
                     <ul>
+                        {/* Role */}
                         <li>Frontend</li>
+                        {/* Level */}
                         <li>Senior</li>
+                        {/* Languages */}
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
@@ -30,23 +33,23 @@ function App() {
 
                 <article className="job featured">
                     <h3>Manage</h3>
-                New!
-                Featured
-                <h2>Fullstack Developer</h2>
-                1d ago
-                Part Time
-                Remote
-                <div>
+                    New!
+                    Featured
+                    <h2>Fullstack Developer</h2>
+                    1d ago
+                    Part Time
+                    Remote
 
-                </div>
-                <!-- Role -->
-                Fullstack
-                <!-- Level -->
-                Midweight
-                <!-- Languages -->
-                Python
-                <!-- Tools -->
-                React
+                    <ul>
+                        {/* Role */}
+                        <li>Fullstack</li>
+                        {/* Level */}
+                        <li>Midweight</li>
+                        {/* Languages */}
+                        <li>Python</li>
+                        {/* Tools */}
+                        <li>React</li>
+                    </ul>
                 </article>
 
                 <article className="job">
@@ -56,18 +59,18 @@ function App() {
                     2d ago
                     Part Time
                     USA only
-                    <div>
 
-                    </div>
-                    <!-- Role -->
-                    Frontend
-                    <!-- Level -->
-                    Junior
-                    <!-- Languages -->
-                    JavaScript
-                    <!-- Tools -->
-                    React
-                    Sass
+                    <ul>
+                        {/* Role */}
+                        <li>Frontend</li>
+                        {/* Level */}
+                        <li>Junior</li>
+                        {/* Languages */}
+                        <li>JavaScript</li>
+                        {/* Tools */}
+                        <li>React</li>
+                        <li>Sass</li>
+                    </ul>
                 </article>
 
             </main>
