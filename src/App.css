@@ -77,6 +77,10 @@ main {
     position: relative;
 }
 
+.job:last-child {
+    margin-bottom: 1rem;
+}
+
 .job.featured {
     border-left: 6px solid var(--primary);
     padding-left: 1.125rem;
