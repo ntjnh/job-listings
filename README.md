@@ -143,8 +143,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Renaming destructured parameters](https://stackoverflow.com/questions/65625625/how-to-rename-a-destructured-parameter-concisely-in-react) - This StackOverflow post came in handy when I was trying to find a way around the `new` keyword problem in my destructuring.
+- [Heading levels should only increase by one](https://dequeuniversity.com/rules/axe/4.7/heading-order) - I got useful advice from this article when I wasn't quite sure about how accessible my heading element ordering was.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
