@@ -33,13 +33,15 @@ function App() {
             </header>
 
             <main>
-                <section>
-                    {/* filter area goes here */}
-                </section>
+                <div className="container">
+                    <section>
+                        {/* filter area goes here */}
+                    </section>
 
-                <section>
-                    {jobs}
-                </section>
+                    <section className="jobs-list">
+                        {jobs}
+                    </section>
+                </div>
             </main>
 
             <Footer />
