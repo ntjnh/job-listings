@@ -145,14 +145,23 @@ main {
 }
 
 /* Footer */
+footer {
+    background-color: hsl(180, 29%, 75%);
+    color: var(--gray-cyan-dark);
+    padding: .75rem;
+}
 
-.attribution {
+footer .attribution {
     font-size: 14px;
     text-align: center;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+footer .attribution a {
+    color: var(--gray-cyan-dark);
+}
+
+footer .attribution a:hover {
+    color: hsl(180, 14%, 36%);
 }
 
 /* Media Queries */
