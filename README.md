@@ -59,27 +59,81 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+#### Reserved keywords
 
-To see how you can add code snippets, see below:
+The data.json file with all the jobs data has a key of `"new"` to highlight newly posted jobs. I originally chose to use object destructuring to feed the job data into each Job component:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```jsx
+  const jobs = data.map(({
+    id,
+    logo,
+    company,
+    position,
+    postedAt,
+    contract,
+    location,
+    role,
+    level,
+    languages,
+    tools,
+    new,
+    featured
+  }) => {
+    return (
+      <Job
+        key={`job-${id}`}
+        id={id}
+        logo={logo}
+        company={company}
+        position={position}
+        postedAt={postedAt}
+        contract={contract}
+        location={location}
+        role={role}
+        level={level}
+        languages={languages}
+        tools={tools}
+        isNew={new}
+        isFeatured={featured}
+      />
+    )
+  })
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+This caused a bit of a headache because `new` is a reserved keyword in JavaScript so I couldn't just use it as is. I even looked up how to rename keys as you destructure an object but that still didn't work because I still had to refer to `new` first before I could assign and use a different name.
+
+I didn't want to have to change my whole implementation to not use destructuring but admittedly, it looked much tidier without the massive list of parameters...
+
+```jsx
+  const jobs = data.map(job => {
+    return (
+      <Job
+        key={`job-${job.id}`}
+        id={job.id}
+        logo={job.logo}
+        company={job.company}
+        position={job.position}
+        postedAt={job.postedAt}
+        contract={job.contract}
+        location={job.location}
+        role={job.role}
+        level={job.level}
+        languages={job.languages}
+        tools={job.tools}
+        isNew={job.new}
+        isFeatured={job.featured}
+      />
+    )
+  })
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+I also didn't want to have a really untidy `App.jsx` file. As this is a small project, I didn't want to split it into too many smaller components.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I briefly went for what felt like a dirty fix and changed the keys in the JSON file to `"isNew"`. This obviously wouldn't be an option if I was getting the data from an API.
+
+To be fair though, regardless of how I would've used my variables, if I'd built the API, I wouldn't have used `new` as a key. But if I had, I would have run into this issue and realised what a mistake it was. Now that I think about it, I feel like most APIs out there DON'T use words that could be reserved keywords in most programming languages.
+
+I'm also aware that Frontend Mentor probably aren't going to build proper APIs for everyone to use to do their code challenges so this approach is perfectly reasonable! 🙂
 
 ### Continued development
 
