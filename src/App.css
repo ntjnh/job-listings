@@ -77,10 +77,6 @@ main {
     position: relative;
 }
 
-.job:last-child {
-    margin-bottom: 1rem;
-}
-
 .job.featured {
     border-left: 6px solid var(--primary);
     padding-left: 1.125rem;
@@ -90,7 +86,7 @@ main {
     border-radius: 15px;
     color: var(--white);
     display: inline-block;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 11px;
     padding: 9px .5rem 7px;
@@ -170,6 +166,12 @@ footer .attribution a:hover {
 
 /* Media Queries */
 
+@media (max-width: 1023px) {
+    .job:last-child {
+        margin-bottom: 1rem;
+    }
+}
+
 @media (min-width: 640px) {
     .container {
         max-width: 90%;
@@ -181,8 +183,23 @@ footer .attribution a:hover {
         max-width: 560px;
     }
 
+    .jobs-list {
+        padding: 4.75rem 0 2.5rem;
+    }
+
+    .job {
+        margin-bottom: 4.5rem;
+        padding: 3.5rem 2rem 2rem;
+        position: relative;
+    }
+
+    .job.featured {
+        padding-left: 1.625rem;
+    }
+
     .job .logo {
         max-width: 90px;
+        top: -45px;
     }
 }
 
@@ -190,16 +207,74 @@ footer .attribution a:hover {
     .container {
         max-width: 720px;
     }
+
+    .jobs-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .job {
+        width: 49%;
+    }
+
+    .job .company {
+        line-height: 27px;
+    }
 }
 
 @media (min-width: 1280px) {
     .container {
         max-width: 75%;
     }
+
+    .job .badge {
+        font-size: 15px;
+    }
 }
 
 @media (min-width: 1440px) {
     .container {
         max-width: 77%;
+    }
+
+    .jobs-list {
+        display: block;
+    }
+
+    .job {
+        align-items: center;
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .details-wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .job .logo {
+        margin-right: 1.5rem;
+        position: static;
+    }
+
+    .job .company {
+        margin-top: 0;
+    }
+
+    .job .company,
+    .job .position {
+        margin-bottom: .75rem;
+    }
+
+    .job .tags {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
     }
 }
