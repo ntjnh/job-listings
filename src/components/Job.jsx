@@ -2,8 +2,8 @@ import React from 'react'
 
 const Job = ({ id, logo, company, position, postedAt, contract, location, role, level, languages, tools, isNew, isFeatured }) => {
     return (
-        <article className="job featured">
-            <img src={logo} alt={company} />
+        <article className={`job${isNew ? ' new': ''}${isFeatured ? ' featured': ''}`}>
+            <img className="logo" src={logo} alt={company} />
             <h3 className="company">
                 {company}
                 {isNew && <span className="badge badge--new">New!</span>}
@@ -12,7 +12,9 @@ const Job = ({ id, logo, company, position, postedAt, contract, location, role, 
             <h2 className="position">{position}</h2>
             <p className="info">
                 <span className="posted-at">{postedAt}</span>
+                <span className="separator">•</span>
                 <span className="contract">{contract}</span>
+                <span className="separator">•</span>
                 <span className="location">{location}</span>
             </p>
 
