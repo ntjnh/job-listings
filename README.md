@@ -39,23 +39,19 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Job Listings GitHub repo](https://github.com/ntjnh/job-listings)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
+- [React](https://reactjs.org/) - JS library
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -145,8 +141,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Renaming destructured parameters](https://stackoverflow.com/questions/65625625/how-to-rename-a-destructured-parameter-concisely-in-react) - This StackOverflow post came in handy when I was trying to find a way around the `new` keyword problem in my destructuring.
 - [Heading levels should only increase by one](https://dequeuniversity.com/rules/axe/4.7/heading-order) - I got useful advice from this article when I wasn't quite sure about how accessible my heading element ordering was.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
