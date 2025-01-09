@@ -1,0 +1,159 @@
+.job {
+    background-color: var(--white);
+    border-radius: 5px;
+    margin-bottom: 2.5rem;
+    padding: 2rem 1.5rem 1.5rem;
+    position: relative;
+}
+
+.job.featured {
+    border-left: 6px solid var(--primary);
+    padding-left: 1.125rem;
+}
+
+.job.new .badgeNew {
+    background-color: var(--primary);
+    margin-left: 1.5rem;
+}
+
+.job.featured .badgeFeatured {
+    background-color: var(--gray-cyan-dark);
+    margin-left: .5rem;
+}
+
+.badge {
+    border-radius: 15px;
+    color: var(--white);
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 11px;
+    padding: 9px .5rem 7px;
+    text-transform: uppercase;
+}
+
+.logo {
+    max-width: 50px;
+    position: absolute;
+    top: -25px;
+}
+
+.company {
+    color: var(--primary);
+    margin: .5rem 0 1rem;
+}
+
+.position {
+    color: var(--gray-cyan-dark);
+    font-size: 1.17rem;
+    margin-bottom: 1rem;
+}
+
+.info {
+    color: var(--gray-cyan);
+}
+
+.info .separator {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.tags {
+    border-top: 1px solid var(--gray-cyan);
+    margin: 1rem 0 -1rem;
+    padding-top: 1rem;
+}
+
+.tags li {
+    background-color: var(--secondary);
+    border-radius: .25rem;
+    color: var(--primary);
+    display: inline-block;
+    font-weight: 700;
+    list-style: none;
+    margin-bottom: 1rem;
+    margin-right: 13px;
+    padding: 10px;
+}
+
+.tags li:last-child {
+    margin-right: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1023px) {
+    .job:last-child {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .job {
+        margin-bottom: 4.5rem;
+        padding: 3.5rem 2rem 2rem;
+        position: relative;
+    }
+
+    .job.featured {
+        padding-left: 1.625rem;
+    }
+
+    .logo {
+        max-width: 90px;
+        top: -45px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .job {
+        width: 49%;
+    }
+
+    .company {
+        line-height: 27px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .badge {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .job {
+        align-items: center;
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .details {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-right: 1.5rem;
+        position: static;
+    }
+
+    .company {
+        margin-top: 0;
+    }
+
+    .company,
+    .position {
+        margin-bottom: .75rem;
+    }
+
+    .tags {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,18 @@
+.footer {
+    background-color: hsl(180, 29%, 75%);
+    color: var(--gray-cyan-dark);
+    padding: .75rem;
+}
+
+.footer .attribution {
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer .attribution a {
+    color: var(--gray-cyan-dark);
+}
+
+.footer .attribution a:hover {
+    color: hsl(180, 14%, 36%);
+}
